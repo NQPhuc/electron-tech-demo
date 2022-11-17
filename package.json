@@ -1,0 +1,17 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "electron techtalk",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "phuc nguyen",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^21.2.3",
+    "electron-builder": "^23.6.0"
+  }
+}
