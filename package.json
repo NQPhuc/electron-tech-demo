@@ -1,5 +1,5 @@
 {
-  "name": "my-electron-app",
+  "name": "electron-tech-demo",
   "version": "1.0.0",
   "description": "electron techtalk",
   "main": "main.js",
