@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+    <script src="./app.js"></script>
+    <style>
+      #screenshot {
+        width: 1280px;
+        height: 720px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This counter will be updated by the main process</h1>
+    <div id="counter">0</div>
+    <br>
+    <hr>
+    <br>
+    <h1>Click the button to set new tittle for our window</h1>
+    <br>
+    New Title: 
+    <input type="text" id="title">
+    <br>
+    <button onclick="setTitle()">Set Title</button>
+    <br>
+    <hr>
+    <br>
+    <h1>Click on the button below to capture screenshot from main process</h1>
+    <br>
+    <button onclick="captureScreenshot()">Capture screen</button>
+    <br>
+    <br>
+    <img id="screenshot"/>
+  </body>
+</html>
