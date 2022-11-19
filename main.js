@@ -4,14 +4,16 @@ const {
   Menu,
   ipcMain,
   desktopCapturer,
+  screen,
 } = require('electron')
 const path = require('path')
 
 const current_ex = process.argv[2] || 5;
 
 async function handleCapture (event) {
+  const size = screen.getPrimaryDisplay().size;
   const promise = new Promise((resolve, reject) => {
-    desktopCapturer.getSources({ types: ['screen'] }).then(sources => {
+    desktopCapturer.getSources({ types: ['screen'], thumbnailSize: size }).then(sources => {
       if (sources.length < 1) reject('Something is wrong');
       return resolve(sources[0].thumbnail.toDataURL())
     });
